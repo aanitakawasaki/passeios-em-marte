@@ -1,0 +1,318 @@
+/*zerando alguns estilos pré-definidos*/
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/*criando as variáveis CSS no root*/
+:root {
+    --font-color: lavenderblush;
+    --color: #cc7c37;
+}
+
+/*definindo alguns estilos pro website inteiro. lembrando que vou usar a abordagem MOBILE-FIRST e vou considerar as medidas do iPhone SE (width: 375 pixels; height: 667 pixels) */
+body {
+    background-color: black;
+    color: var(--font-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px; /*fonte um pouco maior do que o padrão do Google Chrome (16px)*/
+    line-height: 1.6; /*distanciamento entre linhas um pouco maior do que padrão do GC (1.2)*/
+}
+
+/*defini que no geral vou estilizar do micro para o macro (primeiro itens menores, como h1, h2, p, etc, e depois itens maiores header, main, footer). e que em coisas específicas como ul e li vou estilizar do macro para o micro (primeiro ul e depois li). é bom lembrar que os paddings e as margins, por exemplo vão se somando (inclusive de elementos que ficam "grudados"), né!*/
+
+/*TÍTULOS*/
+h1, h2, h3 {
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1;
+    padding: 30px 20px 30px 20px; /*cima direita baixo esquerda*/
+}
+
+h2 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    padding: 70px 20px 10px 20px;
+}
+
+h3 {
+    font-size: 1rem;
+    line-height: 1;
+    padding: 10px 20px 0px 20px;
+}
+
+/*IMAGEM PRINCIPAL*/
+.pic-principal {
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pic-principal > img {
+    width: 100%; /*esse é o melhor jeito para ter responsividade mesmo?*/
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/*MENU NAVEGAÇÃO*/
+.navegacao {
+    padding: 10px 20px 10px 20px; /*menor padding que vou usar na página (padding mínimo de cada elemento - pode variar para mais, mas não para menos)*/
+}
+
+.navegacao > li > a {
+    text-decoration: none;
+    background-color: var(--color);
+    color: lavenderblush;
+    display: block;
+    padding: 7px; /*vai fazer o tamanho dos botões*/
+    margin: 3px auto 3px auto; /*vai fazer a separaçãozinha dos botões verticalmente e a margem horizontalmente automática*/
+    max-width: 500px;
+    text-align: center; /*vai colocar o texto dos botões no meio horizontalmente*/
+    text-transform: uppercase;
+    font-family: 'Play', sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/*criando o efeito no click (pois efeito para cursor no elemento (:hover) não adianta para mobile-first) no menu navegação*/
+.navegacao > li > a:active {
+    font-size: larger;
+}
+
+/*PARÁGRAFOS*/
+p {
+    padding: 10px 20px 10px 20px;
+    text-align: center;
+}
+
+/*MOTIVOS*/
+.motivos > ul {
+    padding: 10px 20px 10px 50px;
+}
+
+.motivos > ul > li {
+    list-style-type: disc;
+}
+
+/*NEWSLETTER*/
+.newsletter > form {
+    background-color: rgba(128, 128, 128, 0.384);
+    padding: 30px 20px 10px 20px;
+    max-width: 500px;
+    display: block;
+    margin: auto; /*vou deixar o auto aqui, porque quando aciona o media queries de min 801px se não estiver assim, não fica centralizado - mas, na real eu queria conseguir deixar as margens laterais de 20px e centralizado automaticamente*/
+}
+
+.dados {
+    font-size: 1.3rem;
+    font-family: 'Play', sans-serif;
+}
+
+.newsletter > form > input {
+    background-color: lavenderblush;
+    border-radius: 5px;
+}
+
+.aceito {
+    font-size: 0.8rem;
+}
+
+.newsletter > form > .inscricao {
+    font-size: 1.3rem;
+    font-family: 'Play', sans-serif;
+    background-color: var(--color);
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: block;
+    margin: 30px auto 30px auto;
+}
+
+/*DEPOIMENTOS*/
+.depoimentos > ul {
+    max-width: 500px;
+    display: block;
+    margin: auto;
+}
+
+.depoimentos > ul > li {
+    padding: 10px 20px 30px 20px;
+    text-align: center;
+}
+
+.depoimentos > ul > li > span {
+    font-family: 'Play', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.depoimentos > ul > li> blockquote {
+    display: block;
+    margin: auto;
+    font-size: 0.9rem;
+}
+
+/*PACOTES*/
+.pacotes {
+    margin-bottom: 90px;
+}
+
+.pacotes > ul {
+    padding: 10px 20px 10px 50px;
+    text-align: center;
+}
+
+.pacotes > ul > li {
+    list-style-type: none;
+}
+
+.pacotes > ul > li > ul > li::before {
+    content: "- ";
+}
+
+/*FOOTER*/
+footer, footer > p {
+    background-color: var(--color);
+    font-size: 0.9rem;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+p.endereco {
+    padding: 5px 40px 0px 40px;
+}
+
+.idiots {
+    font-size: 0.7rem;
+}
+
+/*ANIMAÇÃO*/
+@keyframes pulsar {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.animacao {
+    animation: pulsar 3s ease-in-out infinite;
+  }
+
+/*DEPOIMENTOS.HTML*/
+.pagina-depoimentos > ul > li {
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    padding: 10px 20px 30px 20px;
+    text-align: center;
+}
+
+.pagina-depoimentos > ul > li > span {
+    font-family: 'Play', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.pagina-depoimentos > ul > li> blockquote {
+    display: block;
+    margin: auto;
+    font-size: 0.9rem;
+}
+
+/*CONTATO.HTML*/
+.pagina-contato > form {
+    background-color: rgba(128, 128, 128, 0.384);
+    padding: 30px 20px 10px 20px;
+    max-width: 500px;
+    display: block;
+    margin: 0px auto 50px auto;
+}
+
+.dados {
+    font-size: 1.3rem;
+    font-family: 'Play', sans-serif;
+}
+
+.pagina-contato > form > input, textarea {
+    background-color: lavenderblush;
+    border-radius: 5px;
+}
+
+.aceito {
+    font-size: 0.8rem;
+}
+
+.pagina-contato > form > .enviar {
+    font-size: 1.3rem;
+    font-family: 'Play', sans-serif;
+    background-color: var(--color);
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: block;
+    margin: 30px auto 30px auto;
+}
+
+/*-----------------------------*/
+
+/*MEDIA QUERIES*/
+@media only screen and (min-width: 801px) {
+    .navegacao {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    .navegacao > li > a {
+        width: 200px;
+    }
+
+    .newsletter > form {
+        width: 500px;
+        display: block;
+        margin: auto;
+    }
+    
+    .depoimentos > ul > li {
+        width: 500px;
+    }
+
+    main, footer > p {
+        width: 70%;
+        margin: auto;
+    }
+
+  }
+
+@media only screen and (min-width: 571px) {
+    .pagina-depoimentos > ul > li {
+        width: 350px;
+    }
+
+    .pagina-depoimentos > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        width: 95%;
+        margin: auto;
+    }
+    
+  }

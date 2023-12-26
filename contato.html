@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Página fictícia de compra de passeios em Marte">
+    <meta name="keywords" content="Marte, Mars, passeio, tour">
+    <meta name="author" content="Anita Yumi Kawasaki">
+    
+    <meta property="og:title" content="Passeios em Marte">
+    <meta property="og:description" content="Página fictícia de compra de passeios em Marte">
+    <meta property="og:image" content="img/mars-open-graph.png">
+    <meta property="og:url" content="">
+    
+    <title>PASSEIOS EM MARTE</title>
+    
+    <link rel="shortcut icon" href="img/mars-favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>passeios inesquecíveis em marte</h1>
+
+        <picture class="pic-principal">
+            <source media="(min-width: 1200px)" srcset="img/mars-exploration-desktop-large.png"> 
+            <source media="(min-width: 600px)" srcset="img/mars-exploration-desktop.png"> 
+            <img src="img/mars-exploration.png" alt="representação de uma exploração em Marte"> 
+        </picture>
+        
+        <nav>
+            <ul class="navegacao">
+                <li><a href="index.html">sobre</a></li>
+                <li><a href="depoimentos.html">depoimentos</a></li>
+                <li><a href="contato.html">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-contato">
+            <h2>entre em contato pelo formulário a seguir:</h2>
+    
+            <form action="">
+                <label class="dados" for="nome">nome:</label>
+                <input type="text" name="" id="nome"><br>
+
+                <label class="dados" for="email">e-mail:</label>
+                <input type="email" name="" id="email"><br>
+
+                <label for="textarea">escreva aqui sua mensagem:</label><br>
+                <textarea name="" id="textarea" rows="10" cols="45"></textarea><br>
+
+                <label class="aceito" for="aceito-newsletter"><input type="checkbox" name="" id="aceito-newsletter"> ao preencher o formulário, aceito receber a newsletter da OOIWWTCMars</label><br>
+
+                <label class="aceito" for="aceito-dados"><input type="checkbox" name="" id="aceito-dados"> ao informar meus dados, concordo com a política de privacidade da OOIWWTCMars</label><br>
+
+                <input class="enviar" type="submit" value="enviar mensagem">
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="endereco">endereço da sede da OOIWWTCMars</p>
+        <p>123 Red Dust Avenue. Olympus Mons City, Planeta Marte. Código Postal: MRS 001</p>
+        <p class="idiots">by organization of idiots who want to colonize mars (OOIWWTCMars)</p>
+    </footer>
+</body>
+</html>

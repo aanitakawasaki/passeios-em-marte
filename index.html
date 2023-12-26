@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--metadado que informa o formato de codificação de caracteres utilizado-->
+    <meta charset="UTF-8">
+    
+    <!--metadado que indica como o navegador renderiza e exibe o conteúdo (essa configuração define a largura do conteúdo como a mesma largura do dispositivo em que está sendo exibido e define que a escala inicial deve ser 1 (sem zoom))-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--metadados de descrição, palavras-chave e autoria-->
+    <meta name="description" content="Página fictícia de compra de passeios em Marte">
+    <meta name="keywords" content="Marte, Mars, passeio, tour">
+    <meta name="author" content="Anita Yumi Kawasaki">
+    
+    <!--metadados do Open Graph-->
+    <meta property="og:title" content="Passeios em Marte">
+    <meta property="og:description" content="Página fictícia de compra de passeios em Marte">
+    <meta property="og:image" content="img/mars-open-graph.png">
+    <meta property="og:url" content="">
+    
+    <!--título-->
+    <title>PASSEIOS EM MARTE</title>
+    
+    <!--link do favicon-->
+    <link rel="shortcut icon" href="img/mars-favicon.png" type="image/x-icon">
+
+    <!--link do css-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--link do Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+
+    <!--link do Google Icons-->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+</head>
+<body>
+    <header>
+        <h1>passeios inesquecíveis em marte</h1>
+
+        <!--tag picture para tamanhos de imagem alternativos (responsividade) (não necessariamente essas imagens terão 600px, 600px e 1200px, porque elas precisam, também, cobrir o intervalo (pro maior), então a qualidade tem que ser pro maior, aí eu ajusto o redimensionamento pelo CSS)-->
+        <picture class="pic-principal">
+            <source media="(min-width: 1200px)" srcset="img/mars-exploration-desktop-large.png"> <!--essa imagem aparecerá numa tela de no mínimo 1200px-->
+            <source media="(min-width: 600px)" srcset="img/mars-exploration-desktop.png"> <!--essa imagem aparecerá numa tela de no mínimo 600px-->
+            <img src="img/mars-exploration.png" alt="representação de uma exploração em Marte"> <!--essa imagem aparecerá numa tela de no máximo 599px-->
+        </picture>
+        
+        <nav>
+            <ul class="navegacao">
+                <li><a href="index.html">sobre</a></li>
+                <li><a href="depoimentos.html">depoimentos</a></li>
+                <li><a href="contato.html">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="introducao">
+            <h2>bem-vindo à Marte, a próxima fronteira da exploração humana!</h2>
+            <p>você já se imaginou caminhando na superfície marciana, sentindo a gravidade reduzida e explorando paisagens extraterrestres de tirar o fôlego? essa é a sua chance! oferecemos passeios exclusivos em Marte para aventureiros como você.</p>
+        </section>
+
+        <section class="motivos">
+            <h2>por que escolher nossos passeios em Marte?</h2>
+
+            <ul>
+                <li>experiência única: viva a emoção de explorar um planeta totalmente novo.</li>
+                <li>guias especializados: nossos guias são astronautas treinados, prontos para tornar sua viagem segura e informativa.</li>
+                <li>gravidade reduzida: sinta-se como um verdadeiro marciano com a gravidade reduzida de Marte.</li>
+                <li>paisagens surreais: de crateras a vales marcianos, cada vista é uma obra de arte cósmica.</li>
+            </ul>
+        </section>
+
+        <section class="newsletter">
+            <h2 class="animacao">receba um desconto em seu primeiro passeio:</h2>
+            <p>inscreva-se em nossa newsletter e receba 10% de desconto em seu primeiro passeio!</p>
+
+            <form action="">
+                <label class="dados" for="nome">nome:</label>
+                <input type="text" name="" id="nome"><br>
+
+                <label class="dados" for="email">e-mail:</label>
+                <input type="email" name="" id="email"><br>
+
+                <label class="aceito" for="aceito-newsletter"><input type="checkbox" name="" id="aceito-newsletter"> ao preencher o formulário, aceito receber a newsletter da OOIWWTCMars</label><br>
+
+                <label class="aceito" for="aceito-dados"><input type="checkbox" name="" id="aceito-dados"> ao informar meus dados, concordo com a política de privacidade da OOIWWTCMars</label><br>
+
+                <input class="inscricao" type="submit" value="inscrever-me">
+            </form>
+        </section>
+
+        <section class="depoimentos">
+            <h2>depoimentos de quem já foi:</h2>
+            
+            <ul>
+                <li><span>Maria Fernandes</span><br>
+                    <span>(astronauta amadora)</span>
+                    <blockquote>"Uma experiência surreal! Caminhar na superfície de Marte foi como estar em um sonho. A equipe foi incrível, e a gravidade reduzida deu uma sensação única. Recomendo a todos os aventureiros interplanetários!"</blockquote>
+                </li>
+                <li><span>Carlos Silva</span><br>
+                    <span>(entusiasta espacial)</span>
+                    <blockquote>"Nunca imaginei que pisaria em outro planeta, mas os passeios da OOIWWTCMars tornaram isso possível. O acampamento noturno sob as estrelas marcianas é algo que ficará na memória para sempre. Uma jornada verdadeiramente épica!"</blockquote>
+                </li>
+            </ul>
+        </section>
+
+        <section class="pacotes">
+            <h2>conheça nossos pacotes:</h2>
+
+            <ul>
+                <li>PASSEIO BÁSICO:
+                    <ul>
+                        <li>exploração de superfície por 3 horas</li>
+                        <li>guia especializado</li>
+                        <li>certificado de visita marciana</li>
+                    </ul>
+                </li>
+
+                <li>PASSEIO PREMIUM:
+                    <ul>
+                        <li>acampamento noturno em marte</li>
+                        <li>observação estelar exclusiva</li>
+                        <li>jantar marciano gourmet</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <h3>endereço da sede da OOIWWTCMars</h3>
+        <p class="endereco">123 Red Dust Avenue. Olympus Mons City, Planeta Marte. Código Postal: MRS 001</p>
+        <p class="idiots">by organization of idiots who want to colonize mars (OOIWWTCMars)</p>
+    </footer>
+</body>
+</html>
