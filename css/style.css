@@ -208,6 +208,8 @@ p.endereco {
   }
 
 .animacao {
+    width: fit-content;
+    margin: auto;
     animation: pulsar 3s ease-in-out infinite;
   }
 
@@ -232,13 +234,17 @@ p.endereco {
     font-size: 0.9rem;
 }
 
+.pagina-depoimentos {
+    margin-bottom: 90px;
+}
+
 /*CONTATO.HTML*/
 .pagina-contato > form {
     background-color: rgba(128, 128, 128, 0.384);
     padding: 30px 20px 10px 20px;
     max-width: 500px;
     display: block;
-    margin: 0px auto 50px auto;
+    margin: 0px auto 90px auto;
 }
 
 .dados {
