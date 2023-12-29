@@ -133,6 +133,7 @@ p {
     overflow: hidden;
     display: block;
     margin: 30px auto 30px auto;
+    cursor: pointer;
 }
 
 /*DEPOIMENTOS*/
@@ -143,7 +144,7 @@ p {
 }
 
 .depoimentos > ul > li {
-    padding: 10px 20px 30px 20px;
+    padding: 10px 10px 30px 10px;
     text-align: center;
 }
 
@@ -165,7 +166,6 @@ p {
 }
 
 .pacotes > ul {
-    padding: 10px 20px 10px 50px;
     text-align: center;
 }
 
@@ -270,6 +270,7 @@ p.endereco {
     overflow: hidden;
     display: block;
     margin: 30px auto 30px auto;
+    cursor: pointer;
 }
 
 /*-----------------------------*/
@@ -322,3 +323,7 @@ p.endereco {
     }
     
   }
+
+/*
+teste 3
+*/
